@@ -9,6 +9,9 @@ body {
   height: 100%;
   background-color: black;
 }
+:root {
+  --transition: 1.75s cubic-bezier(0.02, 0.6, 0, 1);
+}
 .slider {
   height: 100%;
 }
@@ -16,7 +19,9 @@ body {
   position: absolute;
   inset: 0;
   background-size: cover;
+  background-position: center;
   will-change: transform;
+  /* transition: var(--transition) !important; */
 }
 .slider_layer:before {
   content: "";
@@ -30,4 +35,6 @@ body {
 }
 .slider_wrapper {
   will-change: transform;
+  transform-style: preserve-3d;
+  /* transition: var(--transition) !important; */
 }
